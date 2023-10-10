@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
 fetchExercises()
 
 });
+//render fetched exercises
+function renderExercises(){
+    const apiDetailsDiv= document.querySelector('.api-details')
+    
+}
 
 //fetch data from the public API
 function fetchExercises () {
