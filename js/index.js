@@ -5,9 +5,21 @@ fetchExercises()
 
 });
 //render fetched exercises
-function renderExercises(){
+function renderExercises(Exercises){
     const apiDetailsDiv= document.querySelector('.api-details')
-    
+
+    Exercises.forEach((exercise) => {
+        const exerciseName =document.createElement('h1')
+
+        exerciseName.textContent=exercise.name
+
+        exerciseName.addEventListener('click', () => {
+            console.log(`Clicked ${exercise.name}`)
+        })
+        apiDetailsDiv.appendChild(exerciseName)
+
+    });
+
 }
 
 //fetch data from the public API
@@ -21,7 +33,7 @@ function fetchExercises () {
 
     })
     .then((res) => res.json())
-    .then((exercises) => console.log(exercises))
+    .then(renderExercises)
     .catch((err) => {
         console.log(err)
     })
