@@ -1,5 +1,4 @@
 const BASE_URL= "https://api.api-ninjas.com/v1/exercises";
-
 //ensure DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
 fetchExercises()
@@ -8,6 +7,7 @@ fetchExercises()
 
 //fetch data from the public API
 function fetchExercises () {
+
     fetch("https://api.api-ninjas.com/v1/exercises", {
         method:'GET',
         headers: {
@@ -17,5 +17,7 @@ function fetchExercises () {
     })
     .then((res) => res.json())
     .then((exercises) => console.log(exercises))
-    .catch((err) => console.log(err))
+    .catch((err) => {
+        console.log(err)
+    })
 }
