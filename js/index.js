@@ -1,4 +1,4 @@
-const BASE_URL= "https://api.api-ninjas.com/v1/exercises?muscle=glutes";
+const BASE_URL= "http://localhost:4000/exercises";
 //ensure DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
 fetchExercises()
@@ -9,14 +9,15 @@ function renderExercises(Exercises){
     const apiDetailsDiv= document.querySelector('.api-details')
 
     Exercises.forEach((exercise) => {
-        const exerciseName =document.createElement('h1')
+        const exerciseGif =document.createElement('img')
 
-        exerciseName.textContent=exercise.name
+        exerciseGif.src=exercise.image
+        
 
-        exerciseName.addEventListener('click', () => {
-            console.log(`Clicked ${exercise.name}`)
+        exerciseGif.addEventListener('click', () => {
+            console.log(`Clicked ${exercise.image}`)
         })
-        apiDetailsDiv.appendChild(exerciseName)
+        apiDetailsDiv.appendChild(exerciseGif)
 
     });
 
@@ -25,12 +26,8 @@ function renderExercises(Exercises){
 //fetch data from the public API
 function fetchExercises () {
 
-    fetch("https://api.api-ninjas.com/v1/exercises?muscle=glutes", {
+    fetch("http://localhost:4000/exercises", {
         method:'GET',
-        headers: {
-            'X-Api-Key': '7UvwXqUHr77cwWKtdo2Ipg==elIKr1GaN2tC7shO'
-        },
-
     })
     .then((res) => res.json())
     .then(renderExercises)
