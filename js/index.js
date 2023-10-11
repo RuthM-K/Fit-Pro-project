@@ -18,7 +18,6 @@ function renderExercises(Exercises){
             console.log(`Clicked ${exercise.image}`)
         })
         apiDetailsDiv.appendChild(exerciseGif)
-
     });
 
 }
