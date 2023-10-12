@@ -62,3 +62,11 @@ body, html{
 .hide{
     display: none;
 }
+
+.like-btn{ 
+    border-color: transparent;
+    background: inherit;
+    width: fit-content;
+    margin-left: auto;
+    padding: 10px;
+}

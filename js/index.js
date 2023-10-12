@@ -24,13 +24,19 @@ function renderExercises(exercises) {
     image.src = exercise.image;
     image.alt = exercise.name;
 
+    const button=document.createElement('button')
+    button.innerText='🤍'
+    button.classList.add("like-btn")
+    cardDiv.appendChild(button)
+
     //have a h5 for the title
     const title = document.createElement("h5");
-    title.classList.add("card-title");
+    title.classList.add("card-title", "show");
     title.textContent = exercise.name;
 
     //function to show
-    title.setAttribute('onclick', `show(${exercise.id})`)
+    //title.setAttribute('onclick', `show()`)
+
 
     cardDiv.appendChild(image);
     //create cardbody div that is inside the card div
@@ -73,7 +79,20 @@ function renderExercises(exercises) {
 
     exerciseNames.appendChild(mainDiv);
   });
-  
+  const like=document.querySelectorAll('.like-btn')
+  like.forEach(btn => {
+    btn.addEventListener('click',(e) =>{
+      e.currentTarget.innerText='❤'
+    })
+  })
+
+  const titles=document.querySelectorAll('.show')
+titles.forEach(title => {
+  title.addEventListener('click', (e) =>{
+    e.currentTarget.parentElement.querySelector('.card-body').classList.toggle('hide')
+  })
+})
+
 }
 
 //fetch data from the public API
