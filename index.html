@@ -1,72 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fit-Pro</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="./css/style.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
     <main class="main-body">
-        <!--This section has navigation bars information-->
-        <nav class="navBar">
-            <div class="navDiv">
-                <div class="Fit-Pro"><a href="#">Fit-Pro</a></div>
-                <ul>
-                    <li><a class="active" href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Explore</a></li>
-                    <li><a href="#">Feedback</a></li>
-                </ul>
-            </div>
-        </nav>
+      <!--This section has navigation bars information-->
+      <nav class="navBar">
+        <div class="navDiv">
+          <div class="Fit-Pro"><a href="#">Fit-Pro</a></div>
+          <ul>
+            <li><a class="active" href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Feedback</a></li>
+          </ul>
+        </div>
+      </nav>
 
-        <!--This section has the hero image information-->
-        <div id="hero-image" class="hero-image">
-            <img src="https://img.freepik.com/free-photo/beautiful-young-sporty
-            -woman-training-workout-gym_155003-41224.jpg" alt="Sporty woman training at the gym">
-            <div class="hero-text">
-                <h2 class="At-Home"><em>At-Home</em></h2>
-                <h1 class="Biceps"><strong>Biceps</strong></h1>
-                <h1 class="Workout">Workout</h1>
-            </div>
-            <!-- <div id="searchBar" class="searchBar">
+      <!--This section has the hero image information-->
+      <div id="hero-image" class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt="Sporty woman training at the gym"
+        />
+        <div class="hero-text">
+          <h2 class="At-Home"><em>At-Home</em></h2>
+          <h1 class="Biceps"><strong>Biceps</strong></h1>
+          <h1 class="Workout">Workout</h1>
+        </div>
+        <!-- <div id="searchBar" class="searchBar">
                 <form id="SearchBar-form" class="SearchBar-form" action="Search"></form>
                 <input id="SearchBar-text" type="text" placeholder="Enter beginner, triceps, cardio">
                 <button>
                     Submit
                 </button>
             </div> -->
-        </div>
+      </div>
 
-        <!--This section has the API details -->
-        <section id="details" class="details">
-            <p>All</p>
-            <div id="api-details"class="api-details"><div>
-
-        </section>
-        <!--Last section of copyright and media details-->
-        <hr>
-        <nav id="mediaButtons" class="mediaButtons"> 
-            <button>
-                <i class="fa-brands fa-twitter"></i>
-            </button>
-            <button>
-                <i class="fa-brands fa-instagram"></i>
-            </button>
-            <button>
-                <i class="fa-brands fa-facebook"></i>
-            </button>
-            
-        </nav>
+      <!--This section has the API details -->
+      <div id="details" class="details">
+        <p>All</p>
+        <div class="row row-cols-1 row-cols-md-2 g-4" id="biceps">
+      <!--Last section of copyright and media details-->
+      <!-- <hr />
+      <nav id="mediaButtons" class="mediaButtons">
+        <button>
+          <i class="fa-brands fa-twitter"></i>
+        </button>
+        <button>
+          <i class="fa-brands fa-instagram"></i>
+        </button>
+        <button>
+          <i class="fa-brands fa-facebook"></i>
+        </button>
+      </nav> -->
     </main>
 
     <script src="./js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
