@@ -24,14 +24,18 @@ function renderExercises(exercises) {
     image.src = exercise.image;
     image.alt = exercise.name;
 
-    cardDiv.appendChild(image);
-    //create cardbody div that is inside the card div
-    const cardBody = document.createElement("div");
-    cardBody.classList.add("card-body");
     //have a h5 for the title
     const title = document.createElement("h5");
     title.classList.add("card-title");
     title.textContent = exercise.name;
+
+    //function to show
+    title.setAttribute('onclick', `show(${exercise.id})`)
+
+    cardDiv.appendChild(image);
+    //create cardbody div that is inside the card div
+    const cardBody = document.createElement("div");
+    cardBody.classList.add("card-body");
 
     //append other details
   
@@ -52,7 +56,11 @@ function renderExercises(exercises) {
     instructions.classList.add('card-text')
     instructions.textContent=`Instructions: ${exercise.instructions}`
 
-    cardBody.appendChild(title);
+    //hide
+    cardBody.classList.add('hide')
+    
+
+    cardDiv.appendChild(title);
     cardBody.appendChild(type)
     cardBody.appendChild(equipment)
     cardBody.appendChild(difficulty)
