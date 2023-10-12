@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 .main-body{
-    background-color: black;
+    background-color: white;
 }
 /* style herader details */
 
@@ -69,4 +69,11 @@ body, html{
     width: fit-content;
     margin-left: auto;
     padding: 20px;
+}
+.mediaButtons{
+    background-color: black; height: 200px; padding-right: 15px; padding-left: 15px;
+    display: flex; align-items: center; justify-content: space-evenly;
+}
+.main-body button i{
+    size: 50px;
 }
