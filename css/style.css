@@ -1,22 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
 .main-body{
-    background-color: black;
+    background-color: white;
 }
 /* style herader details */
-.Fit-Pro{
-    color: orange;
-}
-.headerTitle{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.header-buttons{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 10px;
-}
 
+.navBar{
+    background: black; font-family: calibri; padding-right: 15px; padding-left: 15px; height: 70px;
+}
+.navDiv{
+    display: flex; align-items: center; justify-content: space-between; 
+}
+.Fit-Pro a{
+    color: orange; font-size: 35px; font-weight: bold;
+}
+.navDiv ul li{
+    display: inline-block; line-height: 80px; margin: 0 5px;
+}
+.navDiv ul li a{
+    color: white; font-size: 17px; text-transform: uppercase;
+}
+a.active,a:hover{
+    background: orange; transition: .5s;
+}
 /* Hero image styling */
 body, html{
     height: 100%;
