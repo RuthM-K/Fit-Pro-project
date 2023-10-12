@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function renderExercises(exercises) {
   const exerciseNames = document.getElementById("biceps");
 
+  exerciseNames.innerHTML=''
   exercises.forEach((exercise) => {
     /* //exerciseNames.innerHTML += `<li>${exercise.name}<\li>`;
     this was to render the names of the exercises */
@@ -16,7 +17,7 @@ function renderExercises(exercises) {
     const mainDiv = document.createElement("div");
     mainDiv.classList.add("col");
     //new div
-    const cardDiv = document.createElement("div", "h-50");
+    const cardDiv = document.createElement("div", "h-30");
     //append the image before appending the card to the main div
     const image = document.createElement("img");
     image.classList.add("card-img-top");
@@ -31,7 +32,31 @@ function renderExercises(exercises) {
     const title = document.createElement("h5");
     title.classList.add("card-title");
     title.textContent = exercise.name;
+
+    //append other details
+  
+    const type=document.createElement('p')
+    type.classList.add('card-text', 'hidden')
+    type.textContent=`Type: ${exercise.type}`
+  
+    
+    const equipment=document.createElement('p')
+    equipment.classList.add('card-text')
+    equipment.textContent=`Equipment: ${exercise.equipment}`
+
+    const difficulty=document.createElement('p')
+    difficulty.classList.add('card-text')
+    difficulty.textContent=`Difficulty: ${exercise.difficulty}`
+
+    const instructions=document.createElement('p')
+    instructions.classList.add('card-text')
+    instructions.textContent=`Instructions: ${exercise.instructions}`
+
     cardBody.appendChild(title);
+    cardBody.appendChild(type)
+    cardBody.appendChild(equipment)
+    cardBody.appendChild(difficulty)
+    cardBody.appendChild(instructions)
 
     cardDiv.appendChild(cardBody);
 
@@ -40,6 +65,7 @@ function renderExercises(exercises) {
 
     exerciseNames.appendChild(mainDiv);
   });
+  
 }
 
 //fetch data from the public API
