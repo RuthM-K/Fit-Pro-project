@@ -79,13 +79,14 @@ function renderExercises(exercises) {
 
     exerciseNames.appendChild(mainDiv);
   });
+//like function
   const like=document.querySelectorAll('.like-btn')
   like.forEach(btn => {
     btn.addEventListener('click',(e) =>{
       e.currentTarget.innerText='❤'
     })
   })
-
+//show function
   const titles=document.querySelectorAll('.show')
 titles.forEach(title => {
   title.addEventListener('click', (e) =>{
