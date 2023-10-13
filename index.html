@@ -57,13 +57,38 @@
 
       <!--This section has the API details -->
       <div id="details" class="details">
-        <p>All</p>
+        
+        <div id="searchBar" class="searchBar">
+                <form id="SearchBar-form" class="SearchBar-form" action="Search"></form>
+                <input id="SearchBar-text" type="text" placeholder="Enter beginner, triceps, cardio">
+                <button>
+                    Submit
+                </button>
+            </div>
         <div class="row row-cols-md-2 g-4" id="biceps">
         </div>
-        
+
       <!--Last section of copyright and media details-->
-       <hr />
-      <nav id="mediaButtons" class="mediaButtons">
+      <hr />
+      <!-- the footer has 3 cols; logo, newsfeed and media details -->
+      <footer>
+        <div class="row">
+          <div class="col">
+            <h1 class="logo">Fit-Pro</h1>
+            <p>Biceps don't lie.Don't stop when it hurts, stop when you're done.</p>
+          </div>
+          <div class="col">
+            <h3>Office</h3>
+            <p> Kimathi Street</p>
+            <p>Nairobi, Kenya</p>
+            <p>Nairibi, 00400, Kenya</p>
+            <p class="email-id">fitprogym@gmail.com</p>
+            <h4>+254 700 057 346</h4>
+          </div>
+          <div class="col"></div>
+        </div>
+      </footer>
+      <!-- <nav id="mediaButtons" class="mediaButtons">
         <button>
           <i class="fa-brands fa-twitter"></i>
         </button>
@@ -73,7 +98,7 @@
         <button>
           <i class="fa-brands fa-facebook"></i>
         </button>
-      </nav> 
+      </nav>  -->
     </main>
 
     <script src="./js/index.js"></script>
