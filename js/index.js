@@ -18,12 +18,14 @@ function renderExercises(exercises) {
     mainDiv.classList.add("col");
     //new div
     const cardDiv = document.createElement("div", "h-30");
+    cardDiv.classList.add("card");
     //append the image before appending the card to the main div
     const image = document.createElement("img");
     image.classList.add("card-img-top");
     image.src = exercise.image;
     image.alt = exercise.name;
 
+    //like button
     const button=document.createElement('button')
     button.innerText='🤍'
     button.classList.add("like-btn")
@@ -62,6 +64,7 @@ function renderExercises(exercises) {
     instructions.classList.add('card-text')
     instructions.textContent=`Instructions: ${exercise.instructions}`
 
+
     //hide
     cardBody.classList.add('hide')
     
@@ -73,8 +76,7 @@ function renderExercises(exercises) {
     cardBody.appendChild(instructions)
 
     cardDiv.appendChild(cardBody);
-
-    cardDiv.classList.add("card");
+    
     mainDiv.appendChild(cardDiv);
 
     exerciseNames.appendChild(mainDiv);

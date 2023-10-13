@@ -51,11 +51,12 @@ body, html{
 .hero-text{
     text-align: left;
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 75%;
     color: white;
-    font-size: larger;
+    font-size: 50px;
     font-weight: 400;
+    padding: 10px;
 }
 .Biceps{
     color: orange;
@@ -90,7 +91,7 @@ footer{
     align-items: flex-start;
     justify-content: space-between;
 }
-.col{
+/* .col{
     flex-basis: 25%;
     padding: 10px;
 }
@@ -107,4 +108,7 @@ col.h3{
 .email-id{
     width: fit-content;
     border-bottom: 1px white;
+} */
+.card-title{
+    color: orange;
 }
